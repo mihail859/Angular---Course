@@ -1,1 +1,10 @@
-<p>cats-section works!</p>
+<div class="cats" *ngIf="!isToggle">
+    <ul>
+        <li *ngFor="let cat of cats">
+            <img [src]="cat" alt="Cat Image">
+        </li>
+    </ul>
+</div>
+
+<button  class="cat-btn"  *ngIf="isToggle" (click)="showCats()">Show Cats</button>
+<button  class="cat-btn"  *ngIf="!isToggle" (click)="showCats()">Hide Cats</button>

@@ -1,0 +1,32 @@
+.cats ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 10px
+    
+}
+.cats li {
+    margin-right: 10px; /* Adjust margin between images */
+
+    
+}
+.cats img {
+    width: 200px; /* Set the width of each image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%;
+    transition: opacity 0.3s ease;
+}
+
+.cats img:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}
+.cat-btn{
+    padding: 20px 10px 20px 10px;
+    margin: 20px;
+    border: 2px solid rgb(136, 136, 102);
+    border-radius: 5px;
+    color: rgb(6, 103, 67);
+    font-weight: bold;
+}
