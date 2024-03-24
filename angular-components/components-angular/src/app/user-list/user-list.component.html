@@ -1,8 +1,13 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="isToggled">
     <ul>
-      <li>First</li>
-      <li>Second</li>
-      <li>Third</li>
-      <li>Fourth</li>
+        <li *ngFor="let student of students; index as i" [ngStyle]="{'color': getGradeColor(student.grade)}">
+            name: {{ student.name }} has {{ student.grade }} on the exam
+        </li>
     </ul>
-  </div>
+    
+</div>
+
+<button class="btn-information"  *ngIf="!isToggled" (click)="btnHandler($event)">Show information!</button>
+<button class="btn-information" *ngIf="isToggled" (click)="btnHandler($event)">Hide information!</button>
+
+

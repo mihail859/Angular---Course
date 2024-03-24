@@ -18,3 +18,11 @@
     border-radius: 5px;
     text-align: center;
 }
+.btn-information{
+    padding: 20px 10px 20px 10px;
+    margin: 20px;
+    border: 2px solid rgb(136, 136, 102);
+    border-radius: 5px;
+    color: rgb(6, 103, 67);
+    font-weight: bold;
+}
