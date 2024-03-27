@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-playground": {
+    "workshop-components": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-playground",
+            "outputPath": "dist/workshop-components",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-playground:build:production"
+              "browserTarget": "workshop-components:build:production"
             },
             "development": {
-              "browserTarget": "my-playground:build:development"
+              "browserTarget": "workshop-components:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-playground:build"
+            "browserTarget": "workshop-components:build"
           }
         },
         "test": {
@@ -94,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "72b3ef19-1edb-4115-ae00-c2837611c958"
   }
 }
