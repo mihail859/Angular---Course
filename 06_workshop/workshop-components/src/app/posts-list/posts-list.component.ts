@@ -10,14 +10,18 @@ import { Post } from '../types/post';
 export class PostsListComponent implements OnInit{
 
   posts: Post[] = [];
+  loading: boolean = true;
 
   constructor(private api: ApiService){}
 
   ngOnInit(): void {
-    this.api.getPosts(5).subscribe(post => {
-      console.log(post);
-      this.posts = post;
-    })
+    setTimeout(() => {
+      this.api.getPosts(5).subscribe(posts => {
+        console.log(posts);
+        this.posts = posts;
+        this.loading = false; // Set loading to false when posts are loaded
+      });
+    }, 2000); // Set timeout for 2 seconds (adjust as needed)
   }
 
 
