@@ -10,6 +10,12 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getUsers(){
-    return this.http.get<any>("https://jsonplaceholder.typicode.com/users")
+    return this.http.get<any>("http://localhost:3030/jsonstore/users")
   }
+
+  deleteUser(id: number){
+    return this.http.delete<any>(`http://localhost:3030/jsonstore/users/${id}`)
+  }
+
+
 }

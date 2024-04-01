@@ -12,9 +12,24 @@ export class DashboardComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getUsers().subscribe(users => {
-      this.users = users; // Assign fetched users to the component property
+    this.apiService.getUsers().subscribe(u => {
+      this.users = Object.values(u); // Assign fetched users to the component property
       console.log(this.users);
     });
+  }
+  deleteFunc(id: number): void {
+    console.log(id);
+    
+    
+    this.apiService.deleteUser(id).subscribe(
+      () => {
+        // If deletion is successful, remove the user from the local array
+        this.users = this.users.filter(user => user.id !== id);
+        console.log(`User with ID ${id} deleted successfully.`);
+      },
+      (error: any) => {
+        console.error(`Error deleting user with ID ${id}:`, error);
+      }
+    );
   }
 }
