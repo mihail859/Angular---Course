@@ -9,7 +9,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  login(credentials: LoginInterface){
-    return this.http.post<LoginInterface>("http://localhost:3030/users/login", credentials)
+  getUsers(){
+    return this.http.get<any>("https://jsonplaceholder.typicode.com/users")
   }
 }

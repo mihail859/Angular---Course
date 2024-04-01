@@ -1,0 +1,31 @@
+/* dashboard.component.css */
+
+.dashboard {
+    display: flex; /* Display children horizontally */
+    flex-direction: column; /* Stack sections vertically */
+  }
+  
+  .dashboard section {
+    display: flex; /* Display text and button horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: fit-content;
+
+  }
+  
+  .dashboard section p {
+    margin: 0; /* Reset default margin */
+    margin-right: 10px; /* Add margin to separate text from button */
+  }
+  
+  .dashboard section .delete {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
